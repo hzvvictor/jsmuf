@@ -1,0 +1,10 @@
+.commands
+src/components/exports
+node_modules/
+deprecated/
+src/test
+beta/
+dist/
+src/
+src/**/*.js
+src/**/*.beta.ts

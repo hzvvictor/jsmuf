@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "CommonJS",
+    "outDir": ".",
+    "rootDir": "src/components"
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "beta",
+    "deprecated",
+    "src/test",
+    "in**/",
+    "*.beta.ts",
+  ]
+}

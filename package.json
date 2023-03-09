@@ -1,0 +1,39 @@
+{
+  "name": "jsmuf",
+  "version": "1.0.24",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "tsc --declaration",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tgz": "npm pack & if exist package move *.tgz package & echo success!"
+  },
+  "author": "Victor Manuel Hernandez Vargas",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hzvvictor/jsmuf.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hzvvictor/jsmuf/issues"
+  },
+  "homepage": "https://github.com/hzvvictor/jsmuf#readme",
+  "description": "Una biblioteca de utilidades para Node.js que proporciona funciones para trabajar con arreglos, objetos, cadenas y archivos. También incluye herramientas para trabajar con expresiones regulares y argumentos de línea de comandos.",
+  "keywords": [
+    "node",
+    "utilidades",
+    "arreglos",
+    "objetos",
+    "cadenas",
+    "archivos",
+    "expresiones regulares",
+    "línea de comandos"
+  ],
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2"
+  }
+}

@@ -1,11 +1,11 @@
-# tsmuf
+# jsmuf
 Una libreria que contiene utilidades para trabajar con javascipt.
 - Se encuentra en fase de desarrollo (BETA). 
 - No soporta Typescript 
 
 ## Instalación
-1. Instala las dependencias: `npm install tsmuf`
-2. Importa las librerias => import { inArray , inString, ... } from 'tsmuf';
+1. Instala las dependencias: `npm install jsmuf`
+2. Importa las librerias => import { inArray , inString, ... } from 'jsmuf';
 3. Usa las funciones de la libreria;
 
 ## Uso
@@ -34,7 +34,7 @@ Una libreria que contiene utilidades para trabajar con javascipt.
   Comprueba si un arreglo es un subconjunto de otro arreglo más grande.
 
 ```javascript
-import { inArray } from 'tsmuf';
+import { inArray } from 'jsmuf';
 const { isSubset } = inArray;
 
 const smallArr = [2, 4];
@@ -49,7 +49,7 @@ ___
   Encuentra el valor máximo y su índice en un arreglo de números.
 
 ```javascript
-import { inArray } from 'tsmuf';
+import { inArray } from 'jsmuf';
 const { getMaxValue } = inArray;
 
 const numeros = [5, 9, 3, 2, 8, 1];
@@ -63,7 +63,7 @@ ___
   Elimina elementos duplicados de un array y devuelve un nuevo array sin repeticiones.
 
 ```javascript
-import { inArray } from 'tsmuf';
+import { inArray } from 'jsmuf';
 const { removeDuplicates } = inArray;
 console.log(removeDuplicates([1, 2, 1, 2]))// [1, 2]
 console.log(removeDuplicates([100,200,100]))// [100, 200]
@@ -75,7 +75,7 @@ ___
   Esta función verifica si un array está vacío.
 
 ```javascript
-import { inArray } from 'tsmuf';
+import { inArray } from 'jsmuf';
 const { isEmpty } = inArray;
 
 const result1 = isEmpty([1, 2, 3]); // false
@@ -88,7 +88,7 @@ ___
   Esta función obtiene el último elemento de un arreglo.
 
 ```javascript
-import { inArray } from 'tsmuf';
+import { inArray } from 'jsmuf';
 
 const result1 = inArray.last([1, 2, 3]); // 3
 const result2 = inArray.last([900, 300]); // 300
@@ -110,7 +110,7 @@ ___
 
 ```javascript
 // Importar la función count desde el módulo
-import { inArrayObjects } from 'tsmuf';
+import { inArrayObjects } from 'jsmuf';
 
 // Ejemplo de uso de la función count
 const data = [
@@ -136,7 +136,7 @@ ___
   | Producto C | Category A | 30 | 10
 
 ```javascript
-import { inArrayObjects } from 'tsmuf';
+import { inArrayObjects } from 'jsmuf';
 const { setPropByFilter } = inArrayObjects;
 const products = [
   { id: 1, name: 'Producto A', category: 'Category A', price: 10 },
@@ -167,7 +167,7 @@ ___
 #### _inArrayObjects.groupByNestedProperty_
   Agrupa los elementos de un arreglo por el valor de una propiedad anidada dentro de cada elemento.
 ```javascript
-import { mergeArraysByProperty } from 'tsmuf/inArrayObjects';
+import { mergeArraysByProperty } from 'jsmuf/inArrayObjects';
 const personas = [
   { nombre: "Victor", datos: { persona: { edad: 30, altura: 170 } } },
   { nombre: "Martha", datos: { persona: { edad: 25, altura: 165 } } },
@@ -205,7 +205,7 @@ ___
   Devolviendo un objeto con las propiedades agrupadas como claves y los valores de los arrays combinados como valores.
   Por ejemplo queremos agruparlos por 'country' los array de 'customers' con 'orders'.
 ```javascript
-  import { mergeArraysByProperty } from 'tsmuf/inArrayObjects';
+  import { mergeArraysByProperty } from 'jsmuf/inArrayObjects';
   const customers = [
     { id: 1, name: "John Doe", address: { country: "USA" } },
     { id: 2, name: "Jane Doe", address: { country: "Canada" } },
@@ -263,7 +263,7 @@ Entonces queremos cambiar el precio a 15 cuando sea de color rojo y precio 12,
 , ademas  queremos cambiar el color a verde los que sean de valor 10. 
 Quedando asi:
 ```javascript
-import { setPropByPropValue } from 'tsmuf/inArrayObjects';
+import { setPropByPropValue } from 'jsmuf/inArrayObjects';
 const updates = [
   {
     property: 'details.price',
@@ -295,7 +295,7 @@ ___
   Ordena un array de objetos por una propiedad anidada específica, de manera ascendente o descendente.
 Supongamos que tenemos un array de objetos que representan canciones, y queremos ordenarlas por el año de lanzamiento de manera descendente:
 ```javascript
-import { sortByProperty } from 'tsmuf/inArrayObjects';
+import { sortByProperty } from 'jsmuf/inArrayObjects';
 const songs = [
   {
     title: 'Bohemian Rhapsody', artist: 'Queen',
@@ -348,7 +348,7 @@ ___
    Crea, añade o sobreescribe contenido de un archivo
     - Parametros: (path: string, content: string, option: 'create' | 'append' | 'overwrite')
 ```javascript
-import { write } from 'tsmuf/inFile';
+import { write } from 'jsmuf/inFile';
 
 const path = './text.txt';
 const { error, mensaje } = write(path, 'content', 'create');
@@ -364,7 +364,7 @@ La función `read` permite leer el contenido de un directorio y obtener los arch
 
 Para utilizar esta función, se debe importar desde el archivo donde se desea utilizar de la siguiente forma:
 ```javascript
-import { read } from 'tsmuf/inDir';
+import { read } from 'jsmuf/inDir';
 ```
 Luego, se puede llamar a la función read de la siguiente forma:
 ```javascript
@@ -386,16 +386,16 @@ ___
 #### Uso de la función rename
   La función `rename` permite renombrar un archivo o un directorio en una ruta determinada.
 #### Uso
-Para utilizar la función rename, primero se debe importar del módulo tsmuf/inDir o tsmuf/inFile
+Para utilizar la función rename, primero se debe importar del módulo jsmuf/inDir o jsmuf/inFile
 ```javascript
-import { rename } from 'tsmuf/inDir';
+import { rename } from 'jsmuf/inDir';
 ```
 ```javascript
-import { rename } from 'tsmuf/inFile';
+import { rename } from 'jsmuf/inFile';
 ```
  Luego se puede llamar a la función rename pasándole la ruta del archivo o directorio a renombrar y el nuevo nombre como argumentos.
 ```javascript
-import { rename } from 'tsmuf/inDir';
+import { rename } from 'jsmuf/inDir';
 
 const pathCurrent = '/ruta/al/archivo_o_directorio';
 const newName = 'nuevo_nombre';
@@ -416,16 +416,16 @@ ___
 #### Uso de la función move
   La función `move` permite mover un archivo o un directorio en una ruta determinada.
 #### Uso
-Para utilizar la función move, primero se debe importar del módulo tsmuf/inDir o tsmuf/inFile
+Para utilizar la función move, primero se debe importar del módulo jsmuf/inDir o jsmuf/inFile
 ```javascript
-import { move } from 'tsmuf/inDir';
+import { move } from 'jsmuf/inDir';
 ```
 ```javascript
-import { move } from 'tsmuf/inFile';
+import { move } from 'jsmuf/inFile';
 ```
   Ejemplo
 ```javascript
-import { move } from 'tsmuf/inDir'
+import { move } from 'jsmuf/inDir'
 
 // Ejemplo de uso de la función move para mover un archivo
 const archivoActual = '/home/usuario/documentos/archivo.txt';
@@ -453,7 +453,7 @@ La función devuelve un objeto Response con los siguientes campos:
 
 #### Uso de la función del
 ```javascript
-import { del } from 'tsmuf/inDir'
+import { del } from 'jsmuf/inDir'
 
 const path = '/ruta/a/mi/archivo.txt';
 
@@ -472,16 +472,16 @@ ___
 ### _getStats_
 La función getStats permite obtener información sobre los stats de un archivo o directorio en una ruta específica.
 #### Uso de la función getStats
-Para utilizar la función `getStats`, primero se debe importar del módulo tsmuf/inDir o tsmuf/inFile
+Para utilizar la función `getStats`, primero se debe importar del módulo jsmuf/inDir o jsmuf/inFile
 ```javascript
-import { getStats } from 'tsmuf/inDir';
+import { getStats } from 'jsmuf/inDir';
 ```
 ```javascript
-import { getStats } from 'tsmuf/inFile';
+import { getStats } from 'jsmuf/inFile';
 ```
 La función toma un parámetro path que representa la ruta del archivo o directorio que se quiere analizar. Retorna un objeto que contiene la información de los stats, como si es un archivo o directorio, el tamaño, la fecha de creación y la fecha de modificación. Si la ruta no existe o se produce un error al intentar obtener los stats, la función retorna null.
 ```javascript 
-import { getStats } from 'tsmuf/inDir';
+import { getStats } from 'jsmuf/inDir';
 
 const statsInfo = getStats('/path/to/file');
 
@@ -520,7 +520,7 @@ ___
 ### _inObject.getCountByValues_
   Importacion
 ```javascript
-import { getCountByValues } from 'tsmuf/inObject';
+import { getCountByValues } from 'jsmuf/inObject';
 ```
   Uso
 ```javascript
@@ -554,7 +554,7 @@ ___
 La función getMaxValue toma un objeto con claves de tipo string y valores de tipo number, y devuelve el valor máximo y su clave correspondiente dentro del objeto.
 Importacion:
 ```javascript
-import { getMaxValue } from 'tsmuf/inObject'; 
+import { getMaxValue } from 'jsmuf/inObject'; 
 ```
 #### Ejemplo de uso
 ```javascript
@@ -576,7 +576,7 @@ ___
 La función isEmpty toma un objeto y devuelve true si está vacío, es decir, si no tiene ninguna propiedad. De lo contrario, devuelve false.
 Importacion:
 ```javascript
-import { isEmpty } from 'tsmuf/inObject';
+import { isEmpty } from 'jsmuf/inObject';
 ```
 #### Uso
 Para utilizar la función isEmpty, simplemente llámala con el objeto que deseas comprobar como argumento:
@@ -600,7 +600,7 @@ La función `mapKeys` crea un nuevo objeto con las mismas propiedades que el obj
 
 Aquí está el ejemplo del uso de la función `mapKeys`:
 ```javascript
-import { mapKeys } from 'tsmuf/inObject';
+import { mapKeys } from 'jsmuf/inObject';
 
 const myObject = { firstName: 'John', lastName: 'Doe' };
 const newObject = mapKeys(myObject, (key) => key.toUpperCase());
@@ -619,7 +619,7 @@ ___
 La función mergeDeep toma una cantidad arbitraria de objetos como argumentos y devuelve un nuevo objeto que es la combinación profunda de todos ellos.
 #### Ejemplo
 ```javascript
-import { mergeDeep } from 'tsmuf/inObject';
+import { mergeDeep } from 'jsmuf/inObject';
 const obj1 = { a: 1, b: { c: 2, } };
 const obj2 = { b: { d: 3, }, e: 4 };
 const merged = mergeDeep(obj1, obj2);
@@ -641,7 +641,7 @@ La librería inRegex proporciona varias funciones para validar diferentes patron
 Aquí te mostramos algunos ejemplos sencillos de cómo utilizar las funciones:
 ### Impotacion
 ```javascript
-import inRegex from 'tsmuf/inRegex';
+import inRegex from 'jsmuf/inRegex';
 ```
 ___
 ### Indice 
@@ -680,7 +680,7 @@ La librería inString proporciona funciones para manipular y transformar cadenas
 - [toCamelAndSnakeCase](#inStringToCamelAndSnakeCase)
 ### Impotacion
 ```javascript
-import inString from 'tsmuf/inString';
+import inString from 'jsmuf/inString';
 ```
 ___
 ### _inString.camelToSnake_
@@ -710,7 +710,7 @@ ___
 - [question](#inCliCamelToSnake)
 ### Impotacion
 ```javascript
-import inCli from 'tsmuf/inCli';
+import inCli from 'jsmuf/inCli';
 ```
 ___
 ### _inCli.question_
